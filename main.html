@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Метрологія та вимірювальна техніка — Головна</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Метрологія та вимірювальна техніка</h1>
+        <p class="header-subtitle">Рівень вищої освіти: другий (магістерський)</p>
+        <p class="header-subtitle">Галузь знань: G Інженерія, виробництво та будівництво</p>
+        <p class="header-subtitle">Спеціальність: G6 Інформаційно-вимірювальні технології</p>
+        <p class="header-subtitle">Група: МТТ-М-2025 &nbsp;|&nbsp; Виконав: Твардовський Іван</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="competencies.html">Компетенції</a></li>
+                <li><a href="components.html">Компоненти</a></li>
+                <li><a href="graph.html">Схема</a></li>
+                <li><a href="team.html">Робоча група</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+
+        <h2 id="meta">Мета освітньої програми</h2>
+        <p>
+            Надати освіту в області інформаційно-вимірювальних технологій, створення
+            інформаційно-вимірювальних комплексів, нормативного та приладового забезпечення
+            процесів калібрування засобів вимірювальної техніки, контролю якості та оцінки
+            відповідності продукції, що забезпечує широкий доступ до працевлаштування,
+            підготувати студентів із особливим інтересом до певних областей
+            інформаційно-вимірювальних технологій для подальшого навчання з метою здобуття
+            ступеня доктора філософії.
+        </p>
+
+        <h2>Загальна інформація</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td><b>Університет</b></td>
+                    <td>Івано-Франківський національний технічний університет нафти і газу</td>
+                </tr>
+                <tr>
+                    <td><b>Факультет</b></td>
+                    <td>Факультет автоматизації та енергетики</td>
+                </tr>
+                <tr>
+                    <td><b>Ступінь</b></td>
+                    <td>Магістр з інформаційно-вимірювальних технологій</td>
+                </tr>
+                <tr>
+                    <td><b>Обсяг програми</b></td>
+                    <td>90 кредитів ЄКТС, 1 рік 4 місяці</td>
+                </tr>
+                <tr>
+                    <td><b>Форма навчання</b></td>
+                    <td>Очна (денна), заочна</td>
+                </tr>
+                <tr>
+                    <td><b>Мова викладання</b></td>
+                    <td>Українська</td>
+                </tr>
+                <tr>
+                    <td><b>Термін дії програми</b></td>
+                    <td>З 01.09.2025 р. до моменту оновлення/перегляду</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Форма зворотного зв'язку — Варіант 5: Підписка на дайджест -->
+        <section class="feedback-section">
+            <h2>Підписка на дайджест</h2>
+            <p style="text-align:center; color:#64748b; font-size:0.92rem; margin-top:-10px;">
+                Отримуйте актуальні новини спеціальності на свою електронну пошту
+            </p>
+
+            <div class="form-group">
+                <label for="email">Електронна пошта *</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Категорії новин (оберіть одну або кілька)</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="metrology"> Метрологія та стандартизація
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="ict"> Інформаційно-вимірювальні технології
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="science"> Наукові дослідження
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="career"> Кар'єра та працевлаштування
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="events"> Університетські події
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-label" style="font-weight:600;">
+                    <input type="checkbox" name="agree" required>
+                    Я погоджуюся з <a href="#" style="color:#334155;">правилами розсилки</a> та обробкою персональних даних *
+                </label>
+            </div>
+
+            <button type="button" class="form-submit" onclick="handleSubscribe()">Підписатися</button>
+            <p id="form-msg" style="text-align:center; color:#16a34a; font-weight:600; display:none; margin-top:14px;">
+                ✓ Дякуємо! Ви успішно підписались на дайджест.
+            </p>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>Петро Петренко &copy; ІФНТУНГ, 2026 р.</p>
+    </div>
+</footer>
+
+<script>
+function handleSubscribe() {
+    const email = document.getElementById('email').value;
+    const agree = document.querySelector('input[name="agree"]').checked;
+    const categories = document.querySelectorAll('input[name="category"]:checked');
+    if (!email) { alert('Будь ласка, введіть адресу електронної пошти.'); return; }
+    if (!agree) { alert('Будь ласка, погодьтесь з правилами розсилки.'); return; }
+    if (categories.length === 0) { alert('Будь ласка, оберіть хоча б одну категорію новин.'); return; }
+    document.getElementById('form-msg').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

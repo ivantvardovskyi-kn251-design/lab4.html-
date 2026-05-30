@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* ===== Базові стилі ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #f0f4f8;
+}
+
+/* ===== Container ===== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #334155;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 250px;
+    height: 250px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+}
+
+header h1 {
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 8px 0;
+    z-index: 1;
+}
+
+.header-subtitle {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 3px 0;
+    z-index: 1;
+}
+
+/* ===== Горизонтальне меню (в header) ===== */
+nav {
+    background-color: rgba(0,0,0,0.25);
+    padding: 8px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* ===== Main content ===== */
+main {
+    padding: 30px 0 40px;
+}
+
+/* ===== Шрифти заголовків ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    color: #334155;
+    text-align: center;
+}
+
+/* ===== Секція — підзаголовок ===== */
+.subtitle {
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 4px 0;
+    color: #334155;
+}
+
+/* ===== Таблиця ===== */
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+table th, table td {
+    border: 1px solid #cbd5e1;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+table thead tr {
+    background-color: #334155;
+}
+
+table th {
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #F8FAFC;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* ===== Зображення ===== */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Списки ===== */
+ul, ol {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul li::before {
+    content: "– ";
+    color: #334155;
+    font-weight: bold;
+}
+
+ol li {
+    margin-bottom: 6px;
+    counter-increment: none;
+}
+
+/* ===== Картки компетентностей ===== */
+.competency-item {
+    background: #fff;
+    border-left: 4px solid #334155;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    list-style: none;
+}
+
+.competency-item::before {
+    content: none;
+}
+
+/* ===== Форма зворотного зв'язку ===== */
+.feedback-section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px auto;
+    box-shadow: 0 2px 12px rgba(51,65,85,0.1);
+    max-width: 600px;
+}
+
+.feedback-section h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 9px 13px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    transition: border-color 0.2s;
+    background: #f8fafc;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #334155;
+    background: #fff;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.93rem;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #334155;
+    cursor: pointer;
+}
+
+.form-submit {
+    background-color: #334155;
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    font-family: 'Merriweather', serif;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-submit:hover {
+    background-color: #1e293b;
+}
+
+/* ===== Робоча група (inline-block картки) ===== */
+.team-section {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.team-members {
+    padding: 0;
+    margin: 20px 0;
+    font-size: 0;
+}
+
+.team-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+    margin: 12px 10px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 16px;
+    box-shadow: 0 2px 10px rgba(51,65,85,0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    list-style: none;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.team-card::before {
+    content: none;
+}
+
+.team-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(51,65,85,0.15);
+}
+
+.team-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 3px solid #e2e8f0;
+}
+
+.team-card .member-name {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 4px;
+    font-size: 0.92rem;
+    line-height: 1.4;
+}
+
+.team-card .member-role {
+    color: #64748b;
+    font-size: 0.82rem;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #334155;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 18px 20px;
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+}
+
+/* ===== Responsive ≤768px ===== */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        min-height: 200px;
+        padding: 24px 16px 16px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.8rem;
+    }
+
+    nav {
+        margin-top: 14px;
+        padding: 6px 10px;
+    }
+
+    nav ul {
+        gap: 4px 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+        padding: 4px 7px;
+    }
+
+    .container {
+        padding: 0 14px;
+    }
+
+    table {
+        font-size: 0.82rem;
+    }
+
+    table th, table td {
+        padding: 6px 8px;
+    }
+
+    .feedback-section {
+        padding: 20px 16px;
+        margin: 20px 0;
+    }
+
+    .team-card {
+        width: calc(50% - 24px);
+        margin: 8px 6px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-card {
+        width: calc(100% - 20px);
+        margin: 8px 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+}
